@@ -1,0 +1,67 @@
+SCHEMA
+
+Joi.object({
+ reportNumber: Joi.string().length(17).default(moment().format('YYYYMMDDHHmmssSSS')).forbidden(),
+ assignedTo: Joi.string().uuid().required(),
+ createdDateTime: Joi.date().timestamp().default(moment()).raw().forbidden(),
+ partA: PartA.required(),
+ transactions: Joi.array().items(
+   Joi.object({
+     partB1: PartB1.required(),
+     partD: PartD.optional(),
+     partE: PartE.optional(),
+     dispositions: Joi.array().items(
+       Joi.object({
+         partB2: PartB2.required(),
+         partC: PartC.when('partB2.disposition', {is: 'A', then: Joi.required(), otherwise: Joi.forbidden()}),
+         partF: PartF.when('partB2.onBehalf', {is: 'E', then: Joi.required(), otherwise: Joi.forbidden()}),
+         partG: PartG.when('partB2.onBehalf', {is: 'F', then: Joi.required(), otherwise: Joi.forbidden()})
+       })
+     )
+   })
+ )
+})
+
+
+Defined LCTR :
+
+{
+    "partA": {},
+    "transactions": [
+        {
+            "dispositions": [
+                {
+                    "partB2": {},
+                    "partC": {},
+                    "partF": {},
+                    "partG": {}
+                }
+            ],
+            "partB1": {},
+            "partD": {},
+            "partE": {}
+        }
+    ]
+}
+
+
+SAMPLE
+
+{
+    "partA": {},
+    "transactions": [
+        {
+            "dispositions": [
+                {
+                    "partB2": {},
+                    "partC": {},
+                    "partF": {},
+                    "partG": {}
+                }
+            ],
+            "partB1": {},
+            "partD": {},
+            "partE": {}
+        }
+    ]
+}

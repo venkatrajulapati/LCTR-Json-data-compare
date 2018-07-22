@@ -1,0 +1,87 @@
+{
+    "partA": {
+      "actionCode": "A",
+      "contactGivenName": "John",
+      "contactSurname": "Smith",
+      "contactTelNum": "289-918-9271",
+      "entityIdNum": "01161",
+      "entityLocNum": "1",
+      "entityType": "B",
+      "partId": "A1",
+      "twentyFourHourRule": "0"
+    },
+    "transactions": [
+      {
+        "dispositions": [
+          {
+            "partB2": {
+              "disAmt": "11000.00",
+              "disCurr": "CAD",
+              "disposition": "A",
+              "onBehalf": "E",
+              "partId": "B2"
+            },
+            "partF": {
+              "bussTelExtnl": "321",
+              "bussTelNumber": "123-123-1234",
+              "bussType": "Energy Production",
+              "city": "Toronto",
+              "country": "US",
+              "countryIssue": "CA",
+              "incorpNum": "321",
+              "indvName1": "James Sullivan",
+              "indvName2": "Mike Wizowski",
+              "indvName3": "Boo",
+              "partId": "F1",
+              "postal": "321321",
+              "province": "Idaho",
+              "provinceIssue": "BC",
+              "streetAddress": "123 Fake Street",
+              "trustName": "Monsters Inc"
+            },
+		    "partC": {
+              "acctCurr": "CAD",
+              "acctHolder1": "Phil",
+              "acctHolder2": "Jill",
+              "acctHolder3": "Jane",
+              "acctNum": "12345",
+              "acctType": "A",
+              "branchTransitNum": "12341",
+              "partId": "C1"
+            }
+		   }	
+        ],
+        "partB1": {
+          "nightOrQuickFlag": "0",
+          "partId": "B1",
+          "postingDate": "20180323",
+          "txAmt": "11000.00",
+          "txCond": "A",
+          "txCurr": "USD",
+          "txDate": "20180323",
+          "txTime": "123000"
+        },
+		"partD": {
+          "city": "Townsville",
+          "country": "CA",
+          "countryIssue": "US",
+          "entityClientNum": "313321321",
+          "givenName": "Alfred",
+          "homeNumber": "289-123-1234",
+          "idNumber": "909090",
+          "indvBussTelExtnl": "987",
+          "indvBussTelNumber": "289-123-1234",
+          "indvDob": "19900101",
+          "indvIdentifier": "D",
+          "indvOccupation": "Window Washer",
+          "partId": "D1",
+          "postal": "A1B2C3",
+          "province": "ON",
+          "provinceIssue": "Washington",
+          "residenceCountry": "MX",
+          "streetAddress": "263 Example Ave",
+          "surname": "Stevens"
+        }
+      }
+    ]
+  }
